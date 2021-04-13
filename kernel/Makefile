@@ -6,6 +6,9 @@ default: orig
 
 orig:
 	mkdir $@
-	ln -s $(KDIR)/arch/$(ARCH)/kernel/relocate_kernel.S
+	ln -s $(KDIR)/arch/$(ARCH)/kernel/relocate_kernel.S $@/
 	ln -s $(KDIR)/arch/$(ARCH)/kernel/machine_kexec.c $@/
 	ln -s $(KDIR)/kernel/kexec.c $@/
+
+clean:
+	rm -rf orig
