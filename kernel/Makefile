@@ -11,4 +11,4 @@ orig:
 	ln -s $(KDIR)/kernel/kexec.c $@/
 
 clean:
-	rm -rf orig
+	rm -rf orig kexec-mod.ko *.o
